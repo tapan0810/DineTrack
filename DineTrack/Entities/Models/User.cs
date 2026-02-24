@@ -4,7 +4,7 @@ namespace DineTrack.Entities.Models
 {
     public class User
     {
-        public Guid UserId { get; set; }
+        public int UserId { get; set; }
         public string FullName { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
         public string PasswordHash { get; set; } = string.Empty;
@@ -14,7 +14,7 @@ namespace DineTrack.Entities.Models
         //User: Belongs to one Role
         public Role Role { get; set; } = null!;
 
-        public Guid HostelId { get; set; }
+        public int HostelId { get; set; }
 
         //Belongs to one Hostel
         public Hostel Hostel { get; set; } = null!;

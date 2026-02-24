@@ -2,7 +2,7 @@
 {
     public class Role
     {
-        public Guid RoleId { get; set; }
+        public int RoleId { get; set; }
         public string RoleName { get; set; } = string.Empty;
 
         //Navigation Property: One Role → Many Users
