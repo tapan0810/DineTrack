@@ -1,6 +1,6 @@
 ﻿namespace DineTrack.Entities.Dtos
 {
-    public class UerDto
+    public class UserDto
     {
         public int UserId { get; set; }
         public string FullName { get; set; } = string.Empty;
