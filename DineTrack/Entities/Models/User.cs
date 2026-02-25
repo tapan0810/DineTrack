@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.ViewEngines;
+using System.Text.Json.Serialization;
 
 namespace DineTrack.Entities.Models
 {
@@ -11,20 +12,22 @@ namespace DineTrack.Entities.Models
 
         public int RoleId { get; set; }
 
-        //User: Belongs to one Role
+        [JsonIgnore]
         public Role Role { get; set; } = null!;
 
         public int HostelId { get; set; }
 
-        //Belongs to one Hostel
+        [JsonIgnore]
         public Hostel Hostel { get; set; } = null!;
 
         public bool IsActive { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
-        // Navigation
+        [JsonIgnore]
         public ICollection<Review> Reviews { get; set; } = new List<Review>();
+
+        [JsonIgnore]
         public ICollection<Complaints> Complaints { get; set; } = new List<Complaints>();
     }
 }

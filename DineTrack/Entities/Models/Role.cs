@@ -1,4 +1,6 @@
-﻿namespace DineTrack.Entities.Models
+﻿using System.Text.Json.Serialization;
+
+namespace DineTrack.Entities.Models
 {
     public class Role
     {
@@ -6,6 +8,7 @@
         public string RoleName { get; set; } = string.Empty;
 
         //Navigation Property: One Role → Many Users
+        [JsonIgnore]
         public ICollection<User> Users { get; set; } = new List<User>();
     }
 }
